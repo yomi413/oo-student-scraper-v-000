@@ -2,12 +2,12 @@ require 'pry'
 
 class Student
 
-  attr_accessor :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url 
+  attr_accessor :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url
 
   @@all = []
 
   def initialize(student_hash)
-    student_hash.each do |key, value| 
+    student_hash.each do |key, value|
       self.send("#{key}=", value)
     end
     @@all << self
@@ -31,4 +31,3 @@ class Student
   end
   
 end
-
