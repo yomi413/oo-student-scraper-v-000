@@ -9,8 +9,8 @@ class Scraper
 
     doc.css(".student-card").map do |student|
 
-      { :name => student.css(".student-name").text, 
-        :location => student.css(".student-location").text, 
+      { :name => student.css(".student-name").text,
+        :location => student.css(".student-location").text,
         :profile_url => student.css("a").attribute("href").value
       }
 
@@ -39,7 +39,6 @@ class Scraper
     student_hash.delete_if {|_,value| value == false}
 
     student_hash
-    
+
   end
 end
-
